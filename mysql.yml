@@ -1,0 +1,11 @@
+- hosts: localhost
+
+  tasks:
+    - name: Install MariaDB
+      action: yum name={{ item }}
+      with_items:
+        - mariadb
+        - mariadb-server
+
+    - name: Start the MariaDB service
+      action: service name=mariadb state=started
