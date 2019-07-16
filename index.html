@@ -1,0 +1,14 @@
+<html>
+<body>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #800080;"><strong>Thought Works Demo</strong></span></p>
+<p style="text-align: center;"><span style="text-decoration: underline; color: #800080;"><strong><img src="thoughtwork.jpg" alt="" width="700" height="499" /></strong></span></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>This is demo for setting up a 2 node web server and 1 db node</strong></span></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>Infra setup:</strong></span></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>2 Web Servers which are launched in 2 different availability zones and 2 different public subnets</strong></span></p>
+<p style="text-align: center;"><span style="text-decoration: underline;"><strong>1 DB Server&nbsp; which is hosted in one of the availability zone in a private network</strong></span></p>
+<p style="text-align: center;"><strong><u>There is communication established from Public facing instances to Private(DB Server)</u></strong></p>
+<p style="text-align: center;"><strong><u>Both the public facing instances are attached to Application Load Balancer and request are server when the load balancer is hit</u></strong></p>
+<p style="text-align: center;"><strong><u>This is all done with the help of Terraform and meanwhile webserver needs apache and DB needs database installed so we have used ansible to do this activity and is a masterless setup where it with the help of user_data during the instance launch it clones the repo and runs the playbook</u></strong></p>
+<p style="text-align: center;"><strong><u>We can further enhance using the real code and having a master ansible host to control the deploymemnts as well</u></strong></p>
+</body>
+</html>
