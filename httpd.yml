@@ -4,6 +4,11 @@
   tasks:  
   - name: Install Apache Webserver
     yum: pkg=httpd state=latest
+  - name: Ensure Directory Index is updated
+    lineinfile:
+     path: /etc/httpd/conf/httpd.conf
+     insertafter: "Options Indexes FollowSymLinks"
+     line: DirectoryIndex index.html index.html.var index.php
   - name: Enable Apache on system reboot
     service: name=httpd enabled=yes
     notify: restart apache
